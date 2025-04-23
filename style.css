@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #e6f0ff, #fef9f9);
+  color: #2e2e2e;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.name-screen, .invitation {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #80bfff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+button {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #6fa8dc, #1e90ff);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #5a9bdc, #007bff);
+}
+
+.letter {
+  text-align: left;
+  line-height: 1.7;
+  font-size: 15.5px;
+  color: #444;
+}
+
+.hidden {
+  display: none;
+}
+
+canvas#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.invitation {
+    position: relative;
+    animation: softGlow 5s ease-in-out infinite;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .invitation:hover {
+    box-shadow: 0 0 30px rgba(100, 149, 237, 0.5), 0 0 15px rgba(255, 255, 255, 0.2);
+  }
+  
+  @keyframes softGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(100, 149, 237, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(100, 149, 237, 0.4);
+    }
+  }
+  
+
+  .letter {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.6;
+    white-space: pre-line;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(173, 216, 230, 0.4);
+    background: rgba(255, 255, 255, 0.85);
+    animation: softGlow 5s ease-in-out infinite;
+  }
+  
+  .thank-you {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #007bff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+  
+  .thank-you.show {
+    opacity: 1;
+  }
+  

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shara Drive Launch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="name-screen" id="nameScreen">
+      <h2>You're Invited!</h2>
+      <p>Enter your name to view your invitation:</p>
+      <input type="text" id="nameInput" placeholder="Your Name" />
+      <button onclick="showInvitation()">View Invitation</button>
+    </div>
+
+    <div class="invitation hidden" id="invitationScreen">
+      <div class="letter" id ='letter'>
+        <p>Dear <span id="personName"></span>,</p>
+        
+      </div>
+    </div>
+  </div>
+  <div class="invitation hidden" id="invitationScreen">
+    <div class="letter" id="letter"></div>
+    <div class="thank-you hidden" id="thankYouMsg"></div>
+  </div>
+  
+
+  <canvas id="confettiCanvas"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
